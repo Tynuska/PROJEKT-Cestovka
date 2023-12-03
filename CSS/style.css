@@ -34,8 +34,8 @@ img {
 .navigation {
   display: flex;
   flex-direction: column;
-  gap: 30px;
   align-items: center;
+  gap: 30;
   margin-bottom: 30px;
 }
 
@@ -45,15 +45,19 @@ img {
 
 .navigation__items {
   display: flex;
-  gap: 20px;
 }
 
 .navigation__item {
   color: #f03000;
-  font: Montserrat, Arial, "sans-serif";
+  font-family: "Montserrat", Arial, "sans-serif";
   padding: 20px;
   font-size: 18px;
+  font-weight: 600;
   text-decoration: none;
+}
+.navigation__item:hover {
+  color: #ffffff;
+  background-color: #f03000;
 }
 
 .cards {
@@ -73,7 +77,7 @@ img {
   justify-content: space-between;
   align-items: flex-start;
   padding: 20px;
-  font: Montserrat, Arial, "sans-serif";
+  font: "Montserrat", Arial, "sans-serif";
 }
 
 .card--big {
@@ -81,21 +85,38 @@ img {
   min-height: 240px;
 }
 
+.card--bike {
+  background-image: url("../img/nakole@2x.png");
+}
+
+.card--lake {
+  background-image: url("../img/jezero@2x.png");
+}
+
+.card--canyon {
+  background-image: url("../img/podkova@2x.png");
+}
+
+.card--canary {
+  background-image: url("../img/zatoka@2x.png");
+}
+
 .card__price {
   background-color: #f03000;
   padding: 10px;
+  font-family: "Montserrat", Arial, "sans-serif";
   font-size: 18px;
 }
 
 .card__headline {
   font-size: 28px;
   padding-bottom: 16px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .card__headline-small {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .cards--gap {
@@ -110,16 +131,20 @@ img {
 }
 
 .about__img {
-  width: 30px;
+  width: 40px;
   align-self: flex-start;
+}
+
+.about__date {
+  color: #888888;
 }
 
 .about__headline {
   color: #f03000;
   font-size: 18px;
-  font-weight: bold;
   padding-bottom: 10px;
-  font-family: Montserrat, Arial, "sans-serif";
+  font-family: "Montserrat", Arial, "sans-serif";
+  font-weight: 600;
 }
 
 .about--column {
@@ -127,15 +152,28 @@ img {
   gap: 10px;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (min-width: 768px) {
+  .navigation {
+    flex-direction: row;
+    gap: 58px;
+  }
   .cards {
     flex-direction: row;
     flex-wrap: wrap;
   }
   .card {
     flex-basis: 48%;
+    min-height: 180px;
   }
   .card--big {
-    flex-basis: 48%;
+    min-height: 380px;
+    flex-basis: 100%;
   }
+}
+.about {
+  flex-basis: 48%;
+}
+
+.cards--column {
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */
