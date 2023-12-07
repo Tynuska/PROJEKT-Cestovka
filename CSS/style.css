@@ -2,8 +2,7 @@ html {
   box-sizing: border-box;
 }
 
-*,
-::before,
+* ::before,
 ::after {
   box-sizing: inherit;
 }
@@ -36,7 +35,6 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 30;
-  margin-bottom: 30px;
 }
 
 .navigation__logo {
@@ -45,6 +43,7 @@ img {
 
 .navigation__items {
   display: flex;
+  margin: 30px 0 30px 0;
 }
 
 .navigation__item {
@@ -52,7 +51,7 @@ img {
   font-family: "Montserrat", Arial, "sans-serif";
   padding: 20px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 800;
   text-decoration: none;
 }
 .navigation__item:hover {
@@ -64,6 +63,9 @@ img {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.cards--margin {
   margin-bottom: 40px;
 }
 
@@ -119,10 +121,6 @@ img {
   font-weight: 600;
 }
 
-.cards--gap {
-  gap: 10px;
-}
-
 .about {
   background-color: #f0f0f0;
   display: flex;
@@ -131,7 +129,7 @@ img {
 }
 
 .about__img {
-  width: 40px;
+  width: 30px;
   align-self: flex-start;
 }
 
@@ -156,24 +154,70 @@ img {
   .navigation {
     flex-direction: row;
     gap: 58px;
+    justify-content: space-between;
   }
   .cards {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .card {
-    flex-basis: 48%;
-    min-height: 180px;
-  }
   .card--big {
     min-height: 380px;
     flex-basis: 100%;
   }
+  .cards--small {
+    flex-basis: 100%;
+    display: flex;
+  }
+  .cards--small .card {
+    flex-basis: 42.9%;
+  }
+  .about {
+    flex-basis: 40%;
+    flex-direction: column;
+  }
+  .about--center {
+    text-align: center;
+  }
+  .about__image--center {
+    align-self: center;
+  }
+  .cards--column {
+    flex-direction: column;
+  }
 }
-.about {
-  flex-basis: 48%;
+@media screen and (min-width: 960px) {
+  body {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  .cards {
+    flex-direction: row;
+  }
+  .cards--reverse {
+    flex-direction: row-reverse;
+  }
+  .card--big {
+    flex-basis: 60%;
+  }
+  .cards--small {
+    flex-basis: 33%;
+    display: flex;
+    gap: 20px;
+  }
+  .cards--small .card {
+    flex-basis: 100%;
+  }
+  .about {
+    flex-wrap: nowrap;
+    flex: 1 1 19%;
+  }
+}
+.footer__text {
+  color: #fff;
 }
 
-.cards--column {
-  flex-direction: column;
+.footer {
+  padding: 20px 0;
+  text-align: center;
+  background-color: #444444;
 }/*# sourceMappingURL=style.css.map */
