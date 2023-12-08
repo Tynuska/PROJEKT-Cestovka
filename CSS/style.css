@@ -169,7 +169,7 @@ img {
     display: flex;
   }
   .cards--small .card {
-    flex-basis: 42.9%;
+    flex: 1 1 42%;
   }
   .about {
     flex-basis: 40%;
@@ -197,19 +197,18 @@ img {
     flex-direction: row-reverse;
   }
   .card--big {
-    flex-basis: 60%;
+    flex: 1 1 60%;
   }
   .cards--small {
-    flex-basis: 33%;
+    flex: 1 1 33%;
     display: flex;
     gap: 20px;
   }
   .cards--small .card {
-    flex-basis: 100%;
+    flex: 1 1 100%;
   }
   .about {
-    flex-wrap: nowrap;
-    flex: 1 1 19%;
+    flex: 1 1 15%;
   }
 }
 .footer__text {
